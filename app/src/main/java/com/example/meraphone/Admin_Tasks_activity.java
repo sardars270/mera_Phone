@@ -73,7 +73,7 @@ public class Admin_Tasks_activity extends AppCompatActivity {
 //            case R.id.allorders:
 //
 //                //  startActivity(new Intent(this,View_order.class));
-//                return true;
+//                return true;`
 
             case R.id.add_phone:
                 Admin_Tasks_activity.fm.beginTransaction().replace(R.id.frag_cont_page_adm, new Admin_add_phones(), null).commit();
