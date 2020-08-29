@@ -45,7 +45,6 @@ public class Admin_add_access extends Fragment {
     private ByteArrayOutputStream byteArrayOutputStream;
     private byte[] imageinbtye;
     String encodedImage;
-    //String encodedImage;
     private Bitmap imagetostore;
     FirebaseFirestore db;
 
