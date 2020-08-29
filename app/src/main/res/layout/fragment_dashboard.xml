@@ -92,20 +92,6 @@
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="120dp"
-            android:text="All Orders"
-            android:textColor="@color/colorBlue"
-            android:textSize="15dp"
-            android:visibility="invisible"
-            android:gravity="center"
-            android:padding="10dp"
-            android:id="@+id/orders"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/et_st2"
-            />
 
         <TextView
             android:layout_width="0dp"
@@ -117,6 +103,20 @@
             android:textSize="15dp"
             android:gravity="center"
             android:textColor="@color/colorBlue"
+            android:layout_weight="1"
+            android:background="@drawable/et_st2"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:text="All Orders"
+            android:textColor="@color/colorBlue"
+            android:textSize="15dp"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/orders"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/et_st2"
             />

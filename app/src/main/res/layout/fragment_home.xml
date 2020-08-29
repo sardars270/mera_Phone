@@ -7,21 +7,21 @@
     android:background="#fff"
 
     tools:context=".ui.home.HomeFragment">
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="match_parent"
-     android:focusable="true"
-     android:focusableInTouchMode="true"
-  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
 
-     <androidx.recyclerview.widget.RecyclerView
-         android:id="@+id/rec_topsales"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_topsales"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-         />
+            />
 
- </LinearLayout>
+    </LinearLayout>
 
 </ScrollView>
