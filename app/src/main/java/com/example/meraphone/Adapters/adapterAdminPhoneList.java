@@ -36,10 +36,7 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 
 public class adapterAdminPhoneList extends RecyclerView.Adapter<adapterAdminPhoneList.ViewHolder> {
-    // private ArrayList<String> mImageNames=new ArrayList<>();
-    // private ArrayList<String> mImages=new ArrayList<>();
-    //  private ArrayList<String> mcost=new ArrayList<>();
-    //  private Context context;
+
     private ArrayList<Product> modelArrayList;
     Context context;
     String collection;
@@ -94,7 +91,7 @@ public class adapterAdminPhoneList extends RecyclerView.Adapter<adapterAdminPhon
 
 
 
-        //  holder.img.setImageBitmap(objectModel.getItemImage());
+
 
         holder.cost.setText(objectModel.getItemPrice());
         holder.itemname.setText(objectModel.getItemName());

@@ -46,10 +46,7 @@ public class SamsungFragment extends Fragment {
         // Inflate the layout for this fragment
       View view=  inflater.inflate(R.layout.fragment_samsung, container, false);
         recyclerView=view.findViewById(R.id.recycle_samsung);
-        //recyclerView=view.findViewById(R.id.recycle_iphone);
-
-        //  rating=view.findViewById(R.id.rating);
-
+      
         db = FirebaseFirestore.getInstance();
 
 
@@ -77,11 +74,7 @@ public class SamsungFragment extends Fragment {
                     }
                 });
 
-
-
-
-
-        rvAdapter =new DetailsAdapter(list, getContext(), "af");
+       rvAdapter =new DetailsAdapter(list, getContext(), "af");
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

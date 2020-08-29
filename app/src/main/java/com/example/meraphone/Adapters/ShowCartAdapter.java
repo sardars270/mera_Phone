@@ -87,7 +87,7 @@ public class ShowCartAdapter extends RecyclerView.Adapter<ShowCartAdapter.ViewHo
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                //Toast.makeText(getApplicationContext(),"fail.",Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -109,7 +109,7 @@ public class ShowCartAdapter extends RecyclerView.Adapter<ShowCartAdapter.ViewHo
                 db=FirebaseFirestore.getInstance();
                 DocumentReference docRef = db.collection("Cart").document(objectModel.getId());
 
-// Update the timestamp field with the value from the server
+
                 Map<String,Object> updates = new HashMap<>();
                 updates.put("status", "out");
 

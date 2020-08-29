@@ -59,6 +59,7 @@ DetailsAdapter adapter;
 
                             for (DocumentSnapshot d : list1) {
 
+
                                 Product p = d.toObject(Product.class);
                                 p.setItemName(d.getString("itemName"));
                                 p.setItemRating(d.getString("itemRating"));

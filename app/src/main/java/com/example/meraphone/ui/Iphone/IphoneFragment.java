@@ -61,6 +61,7 @@ public class IphoneFragment extends Fragment {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
+
                         if (!queryDocumentSnapshots.isEmpty()) {
 
                             List<DocumentSnapshot> list1 = queryDocumentSnapshots.getDocuments();

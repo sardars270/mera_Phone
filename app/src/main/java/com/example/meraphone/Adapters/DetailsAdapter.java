@@ -28,10 +28,7 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 
 public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.ViewHolder> {
-    // private ArrayList<String> mImageNames=new ArrayList<>();
-    // private ArrayList<String> mImages=new ArrayList<>();
-    //  private ArrayList<String> mcost=new ArrayList<>();
-    //  private Context context;
+
     private ArrayList<Product> modelArrayList;
     Context context;
     String a;

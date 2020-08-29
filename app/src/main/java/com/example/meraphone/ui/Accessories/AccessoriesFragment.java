@@ -35,7 +35,7 @@ public class AccessoriesFragment extends Fragment {
     ArrayList<Product> list = new ArrayList<>();
 
     public AccessoriesFragment() {
-        // Required empty public constructor
+
     }
 
 
@@ -62,9 +62,9 @@ public class AccessoriesFragment extends Fragment {
 
                         if (!queryDocumentSnapshots.isEmpty()) {
 
-                            List<DocumentSnapshot> list1 = queryDocumentSnapshots.getDocuments();
+                            List<DocumentSnapshot> listadap = queryDocumentSnapshots.getDocuments();
 
-                            for (DocumentSnapshot d : list1) {
+                            for (DocumentSnapshot d : listadap) {
 
                                 Product p = d.toObject(Product.class);
                                 p.setItemName(d.getString("itemName"));
