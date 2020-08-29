@@ -37,76 +37,74 @@ public class ForgotPasswordFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view= inflater.inflate(R.layout.fragment_forgot_password, container, false);
+        final View view = inflater.inflate(R.layout.fragment_forgot_password, container, false);
 
-        edit_email=(EditText)view.findViewById(R.id.edit_email);
-        recoverybtn=(Button)view.findViewById(R.id.recoverybtn);
+        edit_email = (EditText) view.findViewById(R.id.edit_email);
+        recoverybtn = (Button) view.findViewById(R.id.recoverybtn);
         login = view.findViewById(R.id.login);
         mAuth = FirebaseAuth.getInstance();
 
 
+        recoverybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.sendPasswordResetEmail(edit_email.getText().toString())
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
 
-               recoverybtn.setOnClickListener(new View.OnClickListener() {
-                   @Override
-                   public void onClick(View v) {
-                       mAuth.sendPasswordResetEmail(edit_email.getText().toString())
-                               .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                   @Override
-                                   public void onComplete(@NonNull Task<Void> task) {
-                                       if (task.isSuccessful()) {
-                                           AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+                                    // set title
+                                    alertDialogBuilder.setTitle("Reset Password");
 
-                                       // set title
-                                       alertDialogBuilder.setTitle("Reset Password");
+                                    // set dialog message
+                                    alertDialogBuilder
+                                            .setMessage("A Reset Password Link Is Sent To Your Registered EmailID")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
+                                                    MainActivity.fm.beginTransaction().replace(R.id.frag_cont_page, new LoginFragment(), null).commit();
+                                                    // getActivity().finish();
+                                                }
+                                            });
 
-                                       // set dialog message
-                                       alertDialogBuilder
-                                               .setMessage("A Reset Password Link Is Sent To Your Registered EmailID")
-                                               .setCancelable(false)
-                                               .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                                   public void onClick(DialogInterface dialog, int id) {
-                                                       MainActivity.fm.beginTransaction().replace(R.id.frag_cont_page, new LoginFragment(), null).commit();
-                                                      // getActivity().finish();
-                                                   }
-                                               });
+                                    AlertDialog alertDialog = alertDialogBuilder.create();
+                                    alertDialog.show();
+                                } else {
+                                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
 
-                                       AlertDialog alertDialog = alertDialogBuilder.create();
-                                       alertDialog.show();
-                                       }
-                                       else {
-                                           AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+                                    // set title
+                                    alertDialogBuilder.setTitle("Error");
 
-                                           // set title
-                                           alertDialogBuilder.setTitle("Error");
+                                    // set dialog message
+                                    alertDialogBuilder
+                                            .setMessage("A Reset Password Link Is Not Sent. Please Retry.")
+                                            .setCancelable(false)
+                                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int id) {
 
-                                           // set dialog message
-                                           alertDialogBuilder
-                                                   .setMessage("A Reset Password Link Is Not Sent. Please Retry.")
-                                                   .setCancelable(false)
-                                                   .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                                                       public void onClick(DialogInterface dialog, int id) {
+                                                }
+                                            });
 
-                                                       }
-                                                   });
+                                    AlertDialog alertDialog = alertDialogBuilder.create();
+                                    alertDialog.show();
+                                }
 
-                                           AlertDialog alertDialog = alertDialogBuilder.create();
-                                           alertDialog.show();
-                                       }
+                            }
+                        });
 
-                                   }
-                               });
-
-                   }
-               });
+            }
+        });
 
 
-               login.setOnClickListener(new View.OnClickListener() {
-                   @Override
-                   public void onClick(View v) {
-                       MainActivity.fm.beginTransaction().replace(R.id.frag_cont_page, new LoginFragment(), null).commit();
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.fm.beginTransaction().replace(R.id.frag_cont_page, new LoginFragment(), null).commit();
 
-                   }
-               });
+            }
+        });
 
         return view;
     }
