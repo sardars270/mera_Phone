@@ -45,7 +45,6 @@ public class Admin_add_phones extends Fragment {
     private ByteArrayOutputStream byteArrayOutputStream;
     private byte[] imageinbtye;
     String encodedImage;
-    //String encodedImage;
     private Bitmap imagetostore;
     FirebaseFirestore db;
 
@@ -61,7 +60,7 @@ public class Admin_add_phones extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_admin_add_phones, container, false);
         sp_category = view.findViewById(R.id.sp_category);
         sp_hybridsimslot = view.findViewById(R.id.sp_hybridsimslot);
@@ -91,9 +90,6 @@ public class Admin_add_phones extends Fragment {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //boolean check  = db.insertUploadData("Muffins",ed_itemname.getText().toString(), imageinbtye,ed_cost.getText().toString(),"Active","0");
-                //public boolean insertUploadData(String category,String itemname,byte[] itemimage,String cost,String rating, String frontcamera, String modelno, String backcamera, String hybridsimslot, String otgcompatible, String touchscreen,String status, String extra){
-
                 if (uploadTask != null && uploadTask.isInProgress()) {
                     Toast.makeText(getContext(), "Upload in progress", Toast.LENGTH_LONG).show();
 
@@ -146,7 +142,7 @@ public class Admin_add_phones extends Fragment {
 
     private void Fileuploader() {
 
-        //StorageReference ref = mstorageRef.child(System.currentTimeMillis()
+
         b = getExtension(imguri);
         a = String.valueOf(System.currentTimeMillis());
         StorageReference ref = mstorageRef.child(a
@@ -155,19 +151,12 @@ public class Admin_add_phones extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        // Get a URL to the uploaded content
-                        // Uri downloadUrl = taskSnapshot.getUploadSessionUri();  //getDownloadUrl();
-                        // Toast.makeText(getContext(),
-                        //"Image uploaded", Toast.LENGTH_LONG).show();
-                        //toserveraswell();
 
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception exception) {
-                        // Handle unsuccessful uploads
-                        // ...
                     }
                 });
     }
