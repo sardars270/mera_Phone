@@ -1,3 +1,10 @@
+
+/**
+ * AllGadgets.java  is used for showing all gadgets
+
+ * @version 1.0
+ */
+
 package com.example.meraphone.ui.AllGadgets;
 
 import android.annotation.SuppressLint;

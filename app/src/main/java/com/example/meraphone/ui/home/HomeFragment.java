@@ -1,3 +1,10 @@
+
+/**
+ * HomeFragment.java  is used for showing adapter of all phones
+
+ * @version 1.0
+ */
+
 package com.example.meraphone.ui.home;
 
 import android.os.Bundle;

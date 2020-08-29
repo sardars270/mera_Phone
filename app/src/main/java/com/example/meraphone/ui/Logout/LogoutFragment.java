@@ -1,3 +1,10 @@
+
+/**
+ * LogoutFragment.java
+
+ * @version 1.0
+ */
+
 package com.example.meraphone.ui.Logout;
 
 import android.content.Intent;

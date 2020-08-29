@@ -1,3 +1,9 @@
+
+/**
+ * SamsungFragment.java  is used for  adapter of all samsungPhones
+
+ * @version 1.0
+ **/
 package com.example.meraphone.ui.Samsung;
 
 import android.os.Bundle;

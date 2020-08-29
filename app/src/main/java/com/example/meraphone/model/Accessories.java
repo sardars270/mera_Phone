@@ -1,3 +1,9 @@
+/**
+ * Accessories.java  is pojo class for adding and retrieving items of accessories
+ * @author Varun
+ * @date - 22/08/2020
+ * @version 1.0
+ */
 package com.example.meraphone.model;
 
 public class Accessories {

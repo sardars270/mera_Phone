@@ -1,3 +1,11 @@
+
+/**
+ * MyProfileFragment.java  is used for showing user  details and also user can edit their  details too
+
+ * @version 1.0
+ */
+
+
 package com.example.meraphone.ui.MyProfile;
 
 import android.content.DialogInterface;

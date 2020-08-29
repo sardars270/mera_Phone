@@ -1,3 +1,11 @@
+
+/**
+ * DetailsAdapter.java class is adapter for showing product details
+ * @author Arzoo
+ * @date - 19/08/2020
+ * @version 1.0
+ */
+
 package com.example.meraphone.Adapters;
 
 import android.content.Context;
@@ -50,6 +58,11 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.ViewHold
         return holder;
     }
 
+    /**
+     *
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
 
@@ -104,6 +117,10 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.ViewHold
 
     }
 
+    /**
+     *
+     * @return size of array
+     */
     @Override
     public int getItemCount() {
         if(modelArrayList!=null){

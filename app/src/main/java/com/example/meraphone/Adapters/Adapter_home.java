@@ -1,3 +1,10 @@
+
+/**
+ * Adapter_home.java class is adapter for home recyclerview
+ * @author Barinder
+ * @date - 08/03/2020
+ * @version 1.0
+ */
 package com.example.meraphone.Adapters;
 
 import android.content.Context;
@@ -29,6 +36,12 @@ public class Adapter_home extends RecyclerView.Adapter<Adapter_home.ViewHolder> 
         this.context = context;
     }
 
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return holder
+     */
     @NonNull
     @Override
     public Adapter_home.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -37,6 +50,11 @@ public class Adapter_home extends RecyclerView.Adapter<Adapter_home.ViewHolder> 
         return holder;
     }
 
+    /**
+     *
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull Adapter_home.ViewHolder holder, int position) {
         final Product o =l.get(position);
@@ -49,6 +67,10 @@ public class Adapter_home extends RecyclerView.Adapter<Adapter_home.ViewHolder> 
 
     }
 
+    /**
+     *
+     * @return size of list
+     */
     @Override
     public int getItemCount() {
         return l.size();

@@ -1,3 +1,13 @@
+
+/**
+ * Admin_add_access.java class is used for adding accessories by admin
+ * @author Varun
+ * @date - 25/08/2020
+ * @version 1.0
+ */
+
+
+
 package com.example.meraphone;
 
 import android.content.ContentResolver;

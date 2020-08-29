@@ -1,8 +1,18 @@
+/**
+ * Product.java  is pojo class for adding and retrieving items of product
+ * @author Arzoo
+ * @date - 19/08/2020
+ * @version 1.0
+ */
+
+
+
+
 package com.example.meraphone.model;
 
 import android.graphics.Bitmap;
 
-public class Product extends Accessories {
+public class Product  {
     String itemId;
     String itemCategory;
     String itemName;

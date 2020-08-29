@@ -7,9 +7,9 @@ public class Model {
 
     private int ID;
     private String CATEGORY;
-    private String   ITEMNAME;
+    private String ITEMNAME;
     private Bitmap ITEMIMAGE;
-    private String  COST;
+    private String COST;
     private String RATING;
     private String MODELNO;
     private String FRONTCAMERA;
@@ -151,6 +151,4 @@ public class Model {
     }
 
 
-
-
-   }
+}

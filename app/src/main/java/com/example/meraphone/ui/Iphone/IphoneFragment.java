@@ -1,4 +1,9 @@
-package com.example.meraphone.ui.Iphone;
+
+/**
+ * IphoneFragment.java  is used for  adapter of all iphones item
+
+ * @version 1.0
+ */package com.example.meraphone.ui.Iphone;
 
 import android.os.Bundle;
 

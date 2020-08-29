@@ -1,5 +1,9 @@
 package com.example.meraphone.ui.Accessories;
+/**
+ * AccessoriesFragment.java  is used for showing accesories items to the user
 
+ * @version 1.0
+ */
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;

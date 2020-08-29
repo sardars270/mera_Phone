@@ -1,3 +1,9 @@
+/**
+ * adapterAdminPhoneList.java class is adapter for showing list of all phones in recyclerview
+ * @author Barinder
+ * @date - 22/08/2020
+ * @version 1.0
+ */
 package com.example.meraphone.Adapters;
 
 import android.content.Context;
@@ -50,6 +56,12 @@ public class adapterAdminPhoneList extends RecyclerView.Adapter<adapterAdminPhon
         this.collection = collection;
     }
 
+    /**
+     *
+     * @param parent
+     * @param viewType
+     * @return holder
+     */
     @NonNull
     @Override
     public adapterAdminPhoneList.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -59,6 +71,11 @@ public class adapterAdminPhoneList extends RecyclerView.Adapter<adapterAdminPhon
         return holder;
     }
 
+    /**
+     *
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull final adapterAdminPhoneList.ViewHolder holder, int position) {
 
@@ -142,6 +159,10 @@ public class adapterAdminPhoneList extends RecyclerView.Adapter<adapterAdminPhon
 
     }
 
+    /**
+     *
+     * @return arraysize of list
+     */
     @Override
     public int getItemCount() {
         if(modelArrayList!=null){

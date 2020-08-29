@@ -1,3 +1,8 @@
+/**
+ * AboutUsFragment.java  is used for showing company owner details
+
+ * @version 1.0
+ */
 package com.example.meraphone.ui.AboutUs;
 
 import android.os.Bundle;
