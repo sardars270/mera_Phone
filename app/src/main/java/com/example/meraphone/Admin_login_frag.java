@@ -41,15 +41,14 @@ public class Admin_login_frag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_admin_login_frag , container, false);
-        email= view.findViewById(R.id.email);
-        pass=view. findViewById(R.id.pass);
-        bt_login_login= view.findViewById(R.id.bt_login_login);
+        View view = inflater.inflate(R.layout.fragment_admin_login_frag, container, false);
+        email = view.findViewById(R.id.email);
+        pass = view.findViewById(R.id.pass);
+        bt_login_login = view.findViewById(R.id.bt_login_login);
         errorView = view.findViewById(R.id.errorVie);
 
         mAuth = FirebaseAuth.getInstance();
-        db  = FirebaseFirestore.getInstance();
-
+        db = FirebaseFirestore.getInstance();
 
 
         bt_login_login.setOnClickListener(new View.OnClickListener() {
@@ -88,14 +87,12 @@ public class Admin_login_frag extends Fragment {
                                                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                         User user = documentSnapshot.toObject(User.class);
 
-                                                        if(user.isAdmin())
-                                                        {
+                                                        if (user.isAdmin()) {
                                                             Intent HomeActivity = new Intent(getContext(), Admin_Tasks_activity.class);
                                                             //   setResult(RESULT_OK, null);
                                                             startActivity(HomeActivity);
                                                             getActivity().finish();
-                                                        }
-                                                        else {
+                                                        } else {
                                                             errorView.setText("This Email Is Not SetUp For Admin Account.");
                                                         }
                                                     }
@@ -104,7 +101,6 @@ public class Admin_login_frag extends Fragment {
 
                                                 //errorView.setText("");
                                                 // errorView.setVisibility(View.GONE);
-
 
 
                                             } else {
@@ -117,7 +113,6 @@ public class Admin_login_frag extends Fragment {
 
                                     } else {
                                         // If sign in fails, display a message to the user.
-
 
 
                                         Toast.makeText(getContext(), "Authentication failed.",
@@ -138,9 +133,6 @@ public class Admin_login_frag extends Fragment {
 
             }
         });
-
-
-
 
 
         return view;
