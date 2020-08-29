@@ -72,7 +72,7 @@
         android:name="com.example.meraphone.ui.MyPurchases.MyPurchasesFragment"
         android:label="My Purchases"
         tools:layout="@layout/fragment_my_purchases" />
-    
+
     <fragment
         android:id="@+id/nav_Logout"
         android:name="com.example.meraphone.ui.Logout.LogoutFragment"
