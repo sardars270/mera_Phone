@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/admlog"
+    <item
+        android:id="@+id/admlog"
+        android:orderInCategory="100"
         android:title="Admin Login"
-        android:orderInCategory="100"
         app:showAsAction="never" />
-    <item android:id="@+id/Userlog"
+    <item
+        android:id="@+id/Userlog"
+        android:orderInCategory="100"
         android:title="User Login"
-        android:orderInCategory="100"
         app:showAsAction="never" />
-    <item android:id="@+id/Logout"
-        android:title="Logout"
+    <item
+        android:id="@+id/Logout"
         android:orderInCategory="100"
+        android:title="Logout"
         app:showAsAction="never" />
 </menu>
