@@ -36,11 +36,7 @@
         app:showAsAction="never" />
 
 
-    <item
-        android:id="@+id/allorders"
-        android:orderInCategory="100"
-        android:title="View All Orders"
-        app:showAsAction="never" />
+
 
     <item
         android:id="@+id/Logout"
