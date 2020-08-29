@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
     public static FragmentManager fm;
     FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        faltu_context.context=getApplicationContext();
+        faltu_context.context = getApplicationContext();
 
       /*  mAuth  = FirebaseAuth.getInstance();
 
@@ -35,12 +36,10 @@ public class MainActivity extends AppCompatActivity {
 */
 
 
-
-            fm =  getSupportFragmentManager();
-        if (findViewById(R.id.frag_cont_page)!=null)
-        {
-            if(savedInstanceState != null)
-            { return;
+        fm = getSupportFragmentManager();
+        if (findViewById(R.id.frag_cont_page) != null) {
+            if (savedInstanceState != null) {
+                return;
             }
             //////////default fragment///////////////////
             FragmentTransaction fragmentTransaction = fm.beginTransaction();
@@ -63,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
 //respond to menu item selection
         switch (item.getItemId()) {
             case R.id.admlog:
-                MainActivity.fm.beginTransaction().replace(R.id.frag_cont_page,new Admin_login_frag(), null).commit();
+                MainActivity.fm.beginTransaction().replace(R.id.frag_cont_page, new Admin_login_frag(), null).commit();
                 // startActivity(new Intent(this,AdminTasks.class));
                 return true;
             case R.id.Userlog:
-                MainActivity.fm.beginTransaction().replace(R.id.frag_cont_page,new LoginFragment(), null).commit();
+                MainActivity.fm.beginTransaction().replace(R.id.frag_cont_page, new LoginFragment(), null).commit();
                 // startActivity(new Intent(this,AdminTasks.class));
                 return true;
             case R.id.Logout:

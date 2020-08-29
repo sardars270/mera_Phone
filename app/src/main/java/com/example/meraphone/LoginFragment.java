@@ -45,7 +45,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_login, container, false);
+        View view = inflater.inflate(R.layout.fragment_login, container, false);
         bt_login_login = view.findViewById(R.id.bt_login_login);
         bt_login_signup = view.findViewById(R.id.bt_login_signup);
         bt_forgotpass = view.findViewById(R.id.bt_forgotpass);
@@ -54,7 +54,7 @@ public class LoginFragment extends Fragment {
         errorView = view.findViewById(R.id.errorView);
 
 
-mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
 
         bt_login_signup.setOnClickListener(new View.OnClickListener() {
@@ -97,11 +97,11 @@ mAuth = FirebaseAuth.getInstance();
 
 
                                                 //errorView.setText("");
-                                               // errorView.setVisibility(View.GONE);
+                                                // errorView.setVisibility(View.GONE);
                                                 Intent HomeActivity = new Intent(getContext(), MeraPhonDrawerActivity.class);
-                                             //   setResult(RESULT_OK, null);
+                                                //   setResult(RESULT_OK, null);
                                                 startActivity(HomeActivity);
-                                               getActivity().finish();
+                                                getActivity().finish();
 
 
                                             } else {
@@ -135,9 +135,6 @@ mAuth = FirebaseAuth.getInstance();
 
             }
         });
-
-
-
 
 
         bt_forgotpass.setOnClickListener(new View.OnClickListener() {

@@ -5,7 +5,7 @@ import android.app.Application;
 import java.util.ArrayList;
 
 public class global_vars extends Application {
-    private   String LoginUserID;
+    private String LoginUserID;
     public String act_naam_others;
 
     public String getAct_naam_others() {

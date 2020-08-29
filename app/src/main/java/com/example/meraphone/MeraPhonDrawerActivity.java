@@ -34,21 +34,16 @@ public class MeraPhonDrawerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mera_phon_drawer);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        fm=getSupportFragmentManager();
+        fm = getSupportFragmentManager();
         FloatingActionButton fab = findViewById(R.id.fab);
         mAuth = FirebaseAuth.getInstance();
 
 
-        if(mAuth.getCurrentUser() == null)
-        {
+        if (mAuth.getCurrentUser() == null) {
             //User NOT logged In
             this.finish();
-            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
-
-
-
-
 
 
         //Fetch the Display name of current User
@@ -57,11 +52,10 @@ public class MeraPhonDrawerActivity extends AppCompatActivity {
 
         if (user != null) {
 
-           // LoggedIn_User_Email =user.getEmail();
+            // LoggedIn_User_Email =user.getEmail();
             ((global_vars) this.getApplication()).setLoginUserID(user.getEmail());
 
         }
-
 
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +70,7 @@ public class MeraPhonDrawerActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_AboutUs, R.id.nav_Accessories,R.id.nav_AllGadgets,R.id.nav_Iphone,R.id.nav_Samsung,R.id.nav_MyProfile,R.id.nav_MyPurchases,R.id.nav_Logout)
+                R.id.nav_home, R.id.nav_AboutUs, R.id.nav_Accessories, R.id.nav_AllGadgets, R.id.nav_Iphone, R.id.nav_Samsung, R.id.nav_MyProfile, R.id.nav_MyPurchases, R.id.nav_Logout)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
